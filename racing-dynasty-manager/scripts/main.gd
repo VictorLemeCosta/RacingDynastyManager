@@ -6,6 +6,7 @@ var world_engine
 var date_label: Label
 var summary_label: RichTextLabel
 var log_label: RichTextLabel
+var next_event_label: RichTextLabel
 
 
 func _ready() -> void:
@@ -42,6 +43,11 @@ func _build_ui() -> void:
 	date_label.add_theme_font_size_override("font_size", 18)
 
 	root.add_child(date_label)
+	
+	next_event_label = RichTextLabel.new()
+	next_event_label.custom_minimum_size = Vector2(0, 80)
+
+	root.add_child(next_event_label)
 
 	var buttons := HBoxContainer.new()
 	buttons.add_theme_constant_override("separation", 10)
@@ -49,13 +55,13 @@ func _build_ui() -> void:
 	root.add_child(buttons)
 
 	var advance_button := Button.new()
-	advance_button.text = "Avançar 1 dia"
+	advance_button.text = "Continuar"
 	advance_button.pressed.connect(_on_advance_day_pressed)
 
 	buttons.add_child(advance_button)
 
 	var advance_week_button := Button.new()
-	advance_week_button.text = "Avançar 7 dias"
+	advance_week_button.text = "Próxima Corrida"
 	advance_week_button.pressed.connect(_on_advance_week_pressed)
 
 	buttons.add_child(advance_week_button)
@@ -73,23 +79,45 @@ func _build_ui() -> void:
 
 
 func _on_advance_day_pressed() -> void:
-	var events = world_engine.advance_day()
+	var events = world_engine.continue_game()
 	_refresh_ui(events)
 
 
 func _on_advance_week_pressed() -> void:
-	var all_events = []
 
-	for i in range(7):
-		all_events.append_array(world_engine.advance_day())
+	var events = world_engine.continue_game()
 
-	_refresh_ui(all_events)
+	_refresh_ui(events)
 
 
 func _refresh_ui(events: Array) -> void:
 	var state = world_engine.world_state
+	
+	var next_event = world_engine.get_next_event()
+	
+	next_event_label.text = ""
 
-	date_label.text = "Data atual: " + state.currentDate + " | Temporada: " + str(state.currentSeason)
+	if next_event == null:
+
+		next_event_label.append_text("Temporada Encerrada\n")
+
+		next_event_label.append_text("Posição Final: "+ str(state.playerCareer.seasonPosition)+ "\n")
+
+		next_event_label.append_text("Reputação: "+ str(state.playerCareer.reputation))
+
+	else:
+
+		next_event_label.append_text("Próximo Evento\n")
+
+		next_event_label.append_text("Data: "+ str(next_event["date"])+ "\n")
+
+		next_event_label.append_text("Tipo: "+ str(next_event["type"])+ "\n")
+
+		next_event_label.append_text("Campeonato: "+ str(next_event["data"]["championship"])+ "\n")
+
+		next_event_label.append_text("Pista: "+ str(next_event["data"]["track"]))
+
+	date_label.text ="Data atual: "+ state.currentDate+ " | Temporada: "+ str(state.currentSeason)+ " | Corrida "+ str(world_engine.get_completed_rounds())+ "/"+ str(state.totalRounds)
 
 	summary_label.text = ""
 	summary_label.append_text("[b]Resumo do mundo carregado[/b]\n")

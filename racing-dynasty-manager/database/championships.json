@@ -4,644 +4,644 @@
   "file": "championships.json",
   "description": "Base inicial de campeonatos. Cada campeonato conecta uma categoria, calendário, pistas, regras esportivas, pontuação, premiação e requisitos de participação.",
   "designNotes": [
-    "Este arquivo depende de categories.json, tracks.json e licenses.json.",
-    "categoryId deve existir em categories.json.",
-    "trackId deve existir em tracks.json.",
-    "minimumLicenseId deve existir em licenses.json e preferencialmente bater com a licença mínima da categoria.",
-    "Os calendários abaixo são exemplos iniciais para prototipagem e balanceamento, não calendários oficiais reais.",
+	"Este arquivo depende de categories.json, tracks.json e licenses.json.",
+	"categoryId deve existir em categories.json.",
+	"trackId deve existir em tracks.json.",
+	"minimumLicenseId deve existir em licenses.json e preferencialmente bater com a licença mínima da categoria.",
+	"Os calendários abaixo são exemplos iniciais para prototipagem e balanceamento, não calendários oficiais reais.",
     "O objetivo deste arquivo é permitir que o World Engine e o Championship Engine montem temporadas jogáveis."
   ],
   "pointSystems": [
-    {
-      "id": "standard_top10",
-      "name": "Sistema Top 10 Padrão",
-      "positions": [
-        25,
-        18,
-        15,
-        12,
-        10,
-        8,
-        6,
-        4,
-        2,
-        1
-      ],
-      "polePositionBonus": 0,
-      "fastestLapBonus": 1,
-      "fastestLapRequiresTop": 10
-    },
-    {
-      "id": "junior_top10_no_fastest_lap",
-      "name": "Sistema Junior Top 10",
-      "positions": [
-        25,
-        18,
-        15,
-        12,
-        10,
-        8,
-        6,
-        4,
-        2,
-        1
-      ],
-      "polePositionBonus": 2,
-      "fastestLapBonus": 0,
-      "fastestLapRequiresTop": null
-    },
-    {
-      "id": "endurance_top10",
-      "name": "Sistema Endurance Top 10",
-      "positions": [
-        38,
-        27,
-        23,
-        18,
-        15,
-        12,
-        9,
-        6,
-        3,
-        1
-      ],
-      "polePositionBonus": 1,
-      "fastestLapBonus": 0,
-      "fastestLapRequiresTop": null
-    },
-    {
-      "id": "oval_top12",
-      "name": "Sistema Oval Top 12",
-      "positions": [
-        50,
-        40,
-        35,
-        32,
-        30,
-        28,
-        26,
-        24,
-        22,
-        20,
-        18,
-        16
-      ],
-      "polePositionBonus": 1,
-      "fastestLapBonus": 0,
-      "fastestLapRequiresTop": null
-    }
+	{
+	  "id": "standard_top10",
+	  "name": "Sistema Top 10 Padrão",
+	  "positions": [
+		25,
+		18,
+		15,
+		12,
+		10,
+		8,
+		6,
+		4,
+		2,
+		1
+	  ],
+	  "polePositionBonus": 0,
+	  "fastestLapBonus": 1,
+	  "fastestLapRequiresTop": 10
+	},
+	{
+	  "id": "junior_top10_no_fastest_lap",
+	  "name": "Sistema Junior Top 10",
+	  "positions": [
+		25,
+		18,
+		15,
+		12,
+		10,
+		8,
+		6,
+		4,
+		2,
+		1
+	  ],
+	  "polePositionBonus": 2,
+	  "fastestLapBonus": 0,
+	  "fastestLapRequiresTop": null
+	},
+	{
+	  "id": "endurance_top10",
+	  "name": "Sistema Endurance Top 10",
+	  "positions": [
+		38,
+		27,
+		23,
+		18,
+		15,
+		12,
+		9,
+		6,
+		3,
+		1
+	  ],
+	  "polePositionBonus": 1,
+	  "fastestLapBonus": 0,
+	  "fastestLapRequiresTop": null
+	},
+	{
+	  "id": "oval_top12",
+	  "name": "Sistema Oval Top 12",
+	  "positions": [
+		50,
+		40,
+		35,
+		32,
+		30,
+		28,
+		26,
+		24,
+		22,
+		20,
+		18,
+		16
+	  ],
+	  "polePositionBonus": 1,
+	  "fastestLapBonus": 0,
+	  "fastestLapRequiresTop": null
+	}
   ],
   "championships": [
-    {
-      "id": "champ_kart_indoor_sp",
-      "name": "Campeonato Paulista de Kart Indoor",
-      "categoryId": "kart_indoor_regional",
-      "type": "regional",
-      "regionScope": "state",
-      "countryScope": [
+	{
+	  "id": "champ_kart_indoor_sp",
+	  "name": "Campeonato Paulista de Kart Indoor",
+	  "categoryId": "kart_indoor_regional",
+	  "type": "regional",
+	  "regionScope": "state",
+	  "countryScope": [
         "BRA"
-      ],
-      "minimumLicenseId": "KART_REGIONAL",
-      "minimumAge": 13,
-      "prestige": 8,
-      "teamCount": 10,
-      "driversPerTeam": 1,
-      "calendarStyle": "short_local",
-      "pointSystemId": "junior_top10_no_fastest_lap",
-      "seasonRules": {
-        "practiceSessions": 1,
-        "qualifyingFormat": "single_session",
-        "raceFormat": "single_race",
-        "raceDistanceLaps": 20,
-        "mandatoryPitStop": false,
-        "refuelingAllowed": false,
-        "setupChangesDuringRace": false,
-        "damageEnabled": true,
-        "safetyCarEnabled": false
-      },
-      "financials": {
-        "entryFee": 2500,
-        "basePrizePool": 30000,
-        "championPrize": 8000,
-        "averageTravelCostPerRound": 800
-      },
-      "calendar": [
-        {
-          "round": 1,
-          "name": "Etapa Indoor São Paulo 1",
-          "trackId": "interlagos",
-          "month": 2
-        },
-        {
-          "round": 2,
-          "name": "Etapa Indoor São Paulo 2",
-          "trackId": "interlagos",
-          "month": 3
-        },
-        {
-          "round": 3,
-          "name": "Etapa Indoor São Paulo 3",
-          "trackId": "interlagos",
-          "month": 5
-        },
-        {
-          "round": 4,
-          "name": "Etapa Indoor São Paulo 4",
-          "trackId": "interlagos",
-          "month": 7
-        },
-        {
-          "round": 5,
-          "name": "Etapa Indoor São Paulo 5",
-          "trackId": "interlagos",
-          "month": 9
-        },
-        {
-          "round": 6,
-          "name": "Final Paulista Indoor",
-          "trackId": "interlagos",
-          "month": 11
-        }
-      ],
-      "progressionImpact": {
-        "licenseExperienceGain": 1.0,
-        "reputationGainMultiplier": 0.6,
-        "scoutingVisibility": "local"
-      }
-    },
-    {
-      "id": "champ_kart_national_brazil",
-      "name": "Campeonato Brasileiro de Kart",
-      "categoryId": "kart_national",
-      "type": "national",
-      "regionScope": "country",
-      "countryScope": [
+	  ],
+	  "minimumLicenseId": "KART_REGIONAL",
+	  "minimumAge": 13,
+	  "prestige": 8,
+	  "teamCount": 10,
+	  "driversPerTeam": 1,
+	  "calendarStyle": "short_local",
+	  "pointSystemId": "junior_top10_no_fastest_lap",
+	  "seasonRules": {
+		"practiceSessions": 1,
+		"qualifyingFormat": "single_session",
+		"raceFormat": "single_race",
+		"raceDistanceLaps": 20,
+		"mandatoryPitStop": false,
+		"refuelingAllowed": false,
+		"setupChangesDuringRace": false,
+		"damageEnabled": true,
+		"safetyCarEnabled": false
+	  },
+	  "financials": {
+		"entryFee": 2500,
+		"basePrizePool": 30000,
+		"championPrize": 8000,
+		"averageTravelCostPerRound": 800
+	  },
+	  "calendar": [
+		{
+		  "round": 1,
+		  "name": "Etapa Indoor São Paulo 1",
+		  "trackId": "interlagos",
+		  "month": 2
+		},
+		{
+		  "round": 2,
+		  "name": "Etapa Indoor São Paulo 2",
+		  "trackId": "interlagos",
+		  "month": 3
+		},
+		{
+		  "round": 3,
+		  "name": "Etapa Indoor São Paulo 3",
+		  "trackId": "interlagos",
+		  "month": 5
+		},
+		{
+		  "round": 4,
+		  "name": "Etapa Indoor São Paulo 4",
+		  "trackId": "interlagos",
+		  "month": 7
+		},
+		{
+		  "round": 5,
+		  "name": "Etapa Indoor São Paulo 5",
+		  "trackId": "interlagos",
+		  "month": 9
+		},
+		{
+		  "round": 6,
+		  "name": "Final Paulista Indoor",
+		  "trackId": "interlagos",
+		  "month": 11
+		}
+	  ],
+	  "progressionImpact": {
+		"licenseExperienceGain": 1.0,
+		"reputationGainMultiplier": 0.6,
+		"scoutingVisibility": "local"
+	  }
+	},
+	{
+	  "id": "champ_kart_national_brazil",
+	  "name": "Campeonato Brasileiro de Kart",
+	  "categoryId": "kart_national",
+	  "type": "national",
+	  "regionScope": "country",
+	  "countryScope": [
         "BRA"
-      ],
-      "minimumLicenseId": "KART_NATIONAL",
-      "minimumAge": 14,
-      "prestige": 22,
-      "teamCount": 14,
-      "driversPerTeam": 1,
-      "calendarStyle": "national_kart",
-      "pointSystemId": "junior_top10_no_fastest_lap",
-      "seasonRules": {
-        "practiceSessions": 2,
-        "qualifyingFormat": "single_session",
-        "raceFormat": "heat_plus_final",
-        "raceDistanceLaps": 28,
-        "mandatoryPitStop": false,
-        "refuelingAllowed": false,
-        "setupChangesDuringRace": false,
-        "damageEnabled": true,
-        "safetyCarEnabled": false
-      },
-      "financials": {
-        "entryFee": 12000,
-        "basePrizePool": 120000,
-        "championPrize": 35000,
-        "averageTravelCostPerRound": 5000
-      },
-      "calendar": [
-        {
-          "round": 1,
-          "name": "Abertura Nacional",
-          "trackId": "goiania",
-          "month": 3
-        },
-        {
-          "round": 2,
-          "name": "Etapa Sudeste",
-          "trackId": "interlagos",
-          "month": 4
-        },
-        {
-          "round": 3,
-          "name": "Etapa Centro-Oeste",
-          "trackId": "goiania",
-          "month": 6
-        },
-        {
-          "round": 4,
-          "name": "Etapa Sul",
-          "trackId": "interlagos",
-          "month": 8
-        },
-        {
-          "round": 5,
-          "name": "Final Nacional",
-          "trackId": "goiania",
-          "month": 10
-        }
-      ],
-      "progressionImpact": {
-        "licenseExperienceGain": 1.4,
-        "reputationGainMultiplier": 1.0,
-        "scoutingVisibility": "national"
-      }
-    },
-    {
-      "id": "champ_formula_4_international",
-      "name": "Formula 4 International Trophy",
-      "categoryId": "formula_4",
-      "type": "international",
-      "regionScope": "multi_country",
-      "countryScope": [
-        "GBR",
-        "ITA",
-        "FRA",
-        "ESP",
+	  ],
+	  "minimumLicenseId": "KART_NATIONAL",
+	  "minimumAge": 14,
+	  "prestige": 22,
+	  "teamCount": 14,
+	  "driversPerTeam": 1,
+	  "calendarStyle": "national_kart",
+	  "pointSystemId": "junior_top10_no_fastest_lap",
+	  "seasonRules": {
+		"practiceSessions": 2,
+		"qualifyingFormat": "single_session",
+		"raceFormat": "heat_plus_final",
+		"raceDistanceLaps": 28,
+		"mandatoryPitStop": false,
+		"refuelingAllowed": false,
+		"setupChangesDuringRace": false,
+		"damageEnabled": true,
+		"safetyCarEnabled": false
+	  },
+	  "financials": {
+		"entryFee": 12000,
+		"basePrizePool": 120000,
+		"championPrize": 35000,
+		"averageTravelCostPerRound": 5000
+	  },
+	  "calendar": [
+		{
+		  "round": 1,
+		  "name": "Abertura Nacional",
+		  "trackId": "goiania",
+		  "month": 3
+		},
+		{
+		  "round": 2,
+		  "name": "Etapa Sudeste",
+		  "trackId": "interlagos",
+		  "month": 4
+		},
+		{
+		  "round": 3,
+		  "name": "Etapa Centro-Oeste",
+		  "trackId": "goiania",
+		  "month": 6
+		},
+		{
+		  "round": 4,
+		  "name": "Etapa Sul",
+		  "trackId": "interlagos",
+		  "month": 8
+		},
+		{
+		  "round": 5,
+		  "name": "Final Nacional",
+		  "trackId": "goiania",
+		  "month": 10
+		}
+	  ],
+	  "progressionImpact": {
+		"licenseExperienceGain": 1.4,
+		"reputationGainMultiplier": 1.0,
+		"scoutingVisibility": "national"
+	  }
+	},
+	{
+	  "id": "champ_formula_4_international",
+	  "name": "Formula 4 International Trophy",
+	  "categoryId": "formula_4",
+	  "type": "international",
+	  "regionScope": "multi_country",
+	  "countryScope": [
+		"GBR",
+		"ITA",
+		"FRA",
+		"ESP",
         "DEU"
-      ],
-      "minimumLicenseId": "FIA_D",
-      "minimumAge": 15,
-      "prestige": 38,
-      "teamCount": 12,
-      "driversPerTeam": 2,
-      "calendarStyle": "junior_formula",
-      "pointSystemId": "standard_top10",
-      "seasonRules": {
-        "practiceSessions": 2,
-        "qualifyingFormat": "single_session",
-        "raceFormat": "double_header",
-        "raceDistanceLaps": 25,
-        "mandatoryPitStop": false,
-        "refuelingAllowed": false,
-        "setupChangesDuringRace": false,
-        "damageEnabled": true,
-        "safetyCarEnabled": true
-      },
-      "financials": {
-        "entryFee": 85000,
-        "basePrizePool": 500000,
-        "championPrize": 120000,
-        "averageTravelCostPerRound": 35000
-      },
-      "calendar": [
-        {
-          "round": 1,
-          "name": "F4 Silverstone",
-          "trackId": "silverstone",
-          "month": 3
-        },
-        {
-          "round": 2,
-          "name": "F4 Monza",
-          "trackId": "monza",
-          "month": 4
-        },
-        {
-          "round": 3,
-          "name": "F4 Spa",
-          "trackId": "spa_francorchamps",
-          "month": 5
-        },
-        {
-          "round": 4,
-          "name": "F4 Le Mans Support",
-          "trackId": "le_mans",
-          "month": 6
-        },
-        {
-          "round": 5,
-          "name": "F4 Suzuka",
-          "trackId": "suzuka",
-          "month": 9
-        },
-        {
-          "round": 6,
-          "name": "F4 Interlagos Invitational",
-          "trackId": "interlagos",
-          "month": 11
-        }
-      ],
-      "progressionImpact": {
-        "licenseExperienceGain": 2.0,
-        "reputationGainMultiplier": 1.4,
-        "scoutingVisibility": "international"
-      }
-    },
-    {
-      "id": "champ_stock_car_brazil",
-      "name": "Stock Car Brasil Pro Series",
-      "categoryId": "stock_car",
-      "type": "national_top",
-      "regionScope": "country",
-      "countryScope": [
+	  ],
+	  "minimumLicenseId": "FIA_D",
+	  "minimumAge": 15,
+	  "prestige": 38,
+	  "teamCount": 12,
+	  "driversPerTeam": 2,
+	  "calendarStyle": "junior_formula",
+	  "pointSystemId": "standard_top10",
+	  "seasonRules": {
+		"practiceSessions": 2,
+		"qualifyingFormat": "single_session",
+		"raceFormat": "double_header",
+		"raceDistanceLaps": 25,
+		"mandatoryPitStop": false,
+		"refuelingAllowed": false,
+		"setupChangesDuringRace": false,
+		"damageEnabled": true,
+		"safetyCarEnabled": true
+	  },
+	  "financials": {
+		"entryFee": 85000,
+		"basePrizePool": 500000,
+		"championPrize": 120000,
+		"averageTravelCostPerRound": 35000
+	  },
+	  "calendar": [
+		{
+		  "round": 1,
+		  "name": "F4 Silverstone",
+		  "trackId": "silverstone",
+		  "month": 3
+		},
+		{
+		  "round": 2,
+		  "name": "F4 Monza",
+		  "trackId": "monza",
+		  "month": 4
+		},
+		{
+		  "round": 3,
+		  "name": "F4 Spa",
+		  "trackId": "spa_francorchamps",
+		  "month": 5
+		},
+		{
+		  "round": 4,
+		  "name": "F4 Le Mans Support",
+		  "trackId": "le_mans",
+		  "month": 6
+		},
+		{
+		  "round": 5,
+		  "name": "F4 Suzuka",
+		  "trackId": "suzuka",
+		  "month": 9
+		},
+		{
+		  "round": 6,
+		  "name": "F4 Interlagos Invitational",
+		  "trackId": "interlagos",
+		  "month": 11
+		}
+	  ],
+	  "progressionImpact": {
+		"licenseExperienceGain": 2.0,
+		"reputationGainMultiplier": 1.4,
+		"scoutingVisibility": "international"
+	  }
+	},
+	{
+	  "id": "champ_stock_car_brazil",
+	  "name": "Stock Car Brasil Pro Series",
+	  "categoryId": "stock_car",
+	  "type": "national_top",
+	  "regionScope": "country",
+	  "countryScope": [
         "BRA"
-      ],
-      "minimumLicenseId": "FIA_C",
-      "minimumAge": 18,
-      "prestige": 65,
-      "teamCount": 16,
-      "driversPerTeam": 2,
-      "calendarStyle": "touring_national",
-      "pointSystemId": "standard_top10",
-      "seasonRules": {
-        "practiceSessions": 2,
-        "qualifyingFormat": "knockout",
-        "raceFormat": "sprint_plus_main",
-        "raceDistanceLaps": 35,
-        "mandatoryPitStop": true,
-        "refuelingAllowed": false,
-        "setupChangesDuringRace": false,
-        "damageEnabled": true,
-        "safetyCarEnabled": true
-      },
-      "financials": {
-        "entryFee": 350000,
-        "basePrizePool": 3500000,
-        "championPrize": 800000,
-        "averageTravelCostPerRound": 180000
-      },
-      "calendar": [
-        {
-          "round": 1,
-          "name": "Stock Car Goiânia",
-          "trackId": "goiania",
-          "month": 3
-        },
-        {
-          "round": 2,
-          "name": "Stock Car Interlagos 1",
-          "trackId": "interlagos",
-          "month": 4
-        },
-        {
-          "round": 3,
-          "name": "Stock Car Goiânia 2",
-          "trackId": "goiania",
-          "month": 6
-        },
-        {
-          "round": 4,
-          "name": "Stock Car Interlagos 2",
-          "trackId": "interlagos",
-          "month": 8
-        },
-        {
-          "round": 5,
-          "name": "Stock Car Final",
-          "trackId": "interlagos",
-          "month": 12
-        }
-      ],
-      "progressionImpact": {
-        "licenseExperienceGain": 1.8,
-        "reputationGainMultiplier": 1.5,
-        "scoutingVisibility": "national_top"
-      }
-    },
-    {
-      "id": "champ_formula_1_world",
-      "name": "Formula 1 World Championship",
-      "categoryId": "formula_1",
-      "type": "world_championship",
-      "regionScope": "global",
-      "countryScope": [
-        "AUS",
-        "JPN",
-        "ITA",
-        "GBR",
-        "BEL",
-        "BRA",
-        "UAE",
+	  ],
+	  "minimumLicenseId": "FIA_C",
+	  "minimumAge": 18,
+	  "prestige": 65,
+	  "teamCount": 16,
+	  "driversPerTeam": 2,
+	  "calendarStyle": "touring_national",
+	  "pointSystemId": "standard_top10",
+	  "seasonRules": {
+		"practiceSessions": 2,
+		"qualifyingFormat": "knockout",
+		"raceFormat": "sprint_plus_main",
+		"raceDistanceLaps": 35,
+		"mandatoryPitStop": true,
+		"refuelingAllowed": false,
+		"setupChangesDuringRace": false,
+		"damageEnabled": true,
+		"safetyCarEnabled": true
+	  },
+	  "financials": {
+		"entryFee": 350000,
+		"basePrizePool": 3500000,
+		"championPrize": 800000,
+		"averageTravelCostPerRound": 180000
+	  },
+	  "calendar": [
+		{
+		  "round": 1,
+		  "name": "Stock Car Goiânia",
+		  "trackId": "goiania",
+		  "month": 3
+		},
+		{
+		  "round": 2,
+		  "name": "Stock Car Interlagos 1",
+		  "trackId": "interlagos",
+		  "month": 4
+		},
+		{
+		  "round": 3,
+		  "name": "Stock Car Goiânia 2",
+		  "trackId": "goiania",
+		  "month": 6
+		},
+		{
+		  "round": 4,
+		  "name": "Stock Car Interlagos 2",
+		  "trackId": "interlagos",
+		  "month": 8
+		},
+		{
+		  "round": 5,
+		  "name": "Stock Car Final",
+		  "trackId": "interlagos",
+		  "month": 12
+		}
+	  ],
+	  "progressionImpact": {
+		"licenseExperienceGain": 1.8,
+		"reputationGainMultiplier": 1.5,
+		"scoutingVisibility": "national_top"
+	  }
+	},
+	{
+	  "id": "champ_formula_1_world",
+	  "name": "Formula 1 World Championship",
+	  "categoryId": "formula_1",
+	  "type": "world_championship",
+	  "regionScope": "global",
+	  "countryScope": [
+		"AUS",
+		"JPN",
+		"ITA",
+		"GBR",
+		"BEL",
+		"BRA",
+		"UAE",
         "USA"
-      ],
-      "minimumLicenseId": "FIA_SUPER_LICENSE",
-      "minimumAge": 18,
-      "prestige": 100,
-      "teamCount": 10,
-      "driversPerTeam": 2,
-      "calendarStyle": "global_formula",
-      "pointSystemId": "standard_top10",
-      "seasonRules": {
-        "practiceSessions": 3,
-        "qualifyingFormat": "q1_q2_q3",
-        "raceFormat": "grand_prix",
-        "raceDistanceLaps": "track_defined",
-        "mandatoryPitStop": true,
-        "refuelingAllowed": false,
-        "setupChangesDuringRace": false,
-        "damageEnabled": true,
-        "safetyCarEnabled": true,
-        "componentPenaltyRules": true,
-        "juniorPracticeRequirement": true
-      },
-      "financials": {
-        "entryFee": 5000000,
-        "basePrizePool": 600000000,
-        "championPrize": 120000000,
-        "averageTravelCostPerRound": 2500000
-      },
-      "calendar": [
-        {
-          "round": 1,
-          "name": "Australian Grand Prix",
-          "trackId": "suzuka",
-          "month": 3
-        },
-        {
-          "round": 2,
-          "name": "Japanese Grand Prix",
-          "trackId": "suzuka",
-          "month": 4
-        },
-        {
-          "round": 3,
-          "name": "Italian Grand Prix",
-          "trackId": "monza",
-          "month": 5
-        },
-        {
-          "round": 4,
-          "name": "British Grand Prix",
-          "trackId": "silverstone",
-          "month": 7
-        },
-        {
-          "round": 5,
-          "name": "Belgian Grand Prix",
-          "trackId": "spa_francorchamps",
-          "month": 8
-        },
-        {
-          "round": 6,
-          "name": "São Paulo Grand Prix",
-          "trackId": "interlagos",
-          "month": 11
-        }
-      ],
-      "progressionImpact": {
-        "licenseExperienceGain": 3.2,
-        "reputationGainMultiplier": 3.0,
-        "scoutingVisibility": "global_elite"
-      }
-    },
-    {
-      "id": "champ_wec_hypercar_world",
-      "name": "World Endurance Hypercar Championship",
-      "categoryId": "wec_hypercar",
-      "type": "world_endurance",
-      "regionScope": "global",
-      "countryScope": [
-        "FRA",
-        "BEL",
-        "ITA",
-        "JPN",
-        "BRA",
+	  ],
+	  "minimumLicenseId": "FIA_SUPER_LICENSE",
+	  "minimumAge": 18,
+	  "prestige": 100,
+	  "teamCount": 10,
+	  "driversPerTeam": 2,
+	  "calendarStyle": "global_formula",
+	  "pointSystemId": "standard_top10",
+	  "seasonRules": {
+		"practiceSessions": 3,
+		"qualifyingFormat": "q1_q2_q3",
+		"raceFormat": "grand_prix",
+		"raceDistanceLaps": "track_defined",
+		"mandatoryPitStop": true,
+		"refuelingAllowed": false,
+		"setupChangesDuringRace": false,
+		"damageEnabled": true,
+		"safetyCarEnabled": true,
+		"componentPenaltyRules": true,
+		"juniorPracticeRequirement": true
+	  },
+	  "financials": {
+		"entryFee": 5000000,
+		"basePrizePool": 600000000,
+		"championPrize": 120000000,
+		"averageTravelCostPerRound": 2500000
+	  },
+	  "calendar": [
+		{
+		  "round": 1,
+		  "name": "Australian Grand Prix",
+		  "trackId": "suzuka",
+		  "month": 3
+		},
+		{
+		  "round": 2,
+		  "name": "Japanese Grand Prix",
+		  "trackId": "suzuka",
+		  "month": 4
+		},
+		{
+		  "round": 3,
+		  "name": "Italian Grand Prix",
+		  "trackId": "monza",
+		  "month": 5
+		},
+		{
+		  "round": 4,
+		  "name": "British Grand Prix",
+		  "trackId": "silverstone",
+		  "month": 7
+		},
+		{
+		  "round": 5,
+		  "name": "Belgian Grand Prix",
+		  "trackId": "spa_francorchamps",
+		  "month": 8
+		},
+		{
+		  "round": 6,
+		  "name": "São Paulo Grand Prix",
+		  "trackId": "interlagos",
+		  "month": 11
+		}
+	  ],
+	  "progressionImpact": {
+		"licenseExperienceGain": 3.2,
+		"reputationGainMultiplier": 3.0,
+		"scoutingVisibility": "global_elite"
+	  }
+	},
+	{
+	  "id": "champ_wec_hypercar_world",
+	  "name": "World Endurance Hypercar Championship",
+	  "categoryId": "wec_hypercar",
+	  "type": "world_endurance",
+	  "regionScope": "global",
+	  "countryScope": [
+		"FRA",
+		"BEL",
+		"ITA",
+		"JPN",
+		"BRA",
         "USA"
-      ],
-      "minimumLicenseId": "FIA_A",
-      "minimumAge": 18,
-      "prestige": 94,
-      "teamCount": 12,
-      "driversPerTeam": 3,
-      "calendarStyle": "endurance_global",
-      "pointSystemId": "endurance_top10",
-      "seasonRules": {
-        "practiceSessions": 3,
-        "qualifyingFormat": "multi_driver_average",
-        "raceFormat": "timed_endurance",
-        "raceDurationHours": [
-          6,
-          8,
-          24
-        ],
-        "mandatoryPitStop": true,
-        "refuelingAllowed": true,
-        "setupChangesDuringRace": false,
-        "damageEnabled": true,
-        "safetyCarEnabled": true,
-        "driverStintRules": true
-      },
-      "financials": {
-        "entryFee": 1500000,
-        "basePrizePool": 90000000,
-        "championPrize": 18000000,
-        "averageTravelCostPerRound": 1200000
-      },
-      "calendar": [
-        {
-          "round": 1,
-          "name": "Spa 6 Hours",
-          "trackId": "spa_francorchamps",
-          "month": 4,
-          "durationHours": 6
-        },
-        {
-          "round": 2,
-          "name": "Le Mans 24 Hours",
-          "trackId": "le_mans",
-          "month": 6,
-          "durationHours": 24
-        },
-        {
-          "round": 3,
-          "name": "Monza 6 Hours",
-          "trackId": "monza",
-          "month": 7,
-          "durationHours": 6
-        },
-        {
-          "round": 4,
-          "name": "Fuji/Suzuka Endurance",
-          "trackId": "suzuka",
-          "month": 9,
-          "durationHours": 6
-        },
-        {
-          "round": 5,
-          "name": "São Paulo 6 Hours",
-          "trackId": "interlagos",
-          "month": 10,
-          "durationHours": 6
-        }
-      ],
-      "progressionImpact": {
-        "licenseExperienceGain": 2.8,
-        "reputationGainMultiplier": 2.4,
-        "scoutingVisibility": "global_elite"
-      }
-    },
-    {
-      "id": "champ_indycar_series",
-      "name": "IndyCar Series",
-      "categoryId": "indycar",
-      "type": "top_oval_formula",
-      "regionScope": "north_america",
-      "countryScope": [
-        "USA",
+	  ],
+	  "minimumLicenseId": "FIA_A",
+	  "minimumAge": 18,
+	  "prestige": 94,
+	  "teamCount": 12,
+	  "driversPerTeam": 3,
+	  "calendarStyle": "endurance_global",
+	  "pointSystemId": "endurance_top10",
+	  "seasonRules": {
+		"practiceSessions": 3,
+		"qualifyingFormat": "multi_driver_average",
+		"raceFormat": "timed_endurance",
+		"raceDurationHours": [
+		  6,
+		  8,
+		  24
+		],
+		"mandatoryPitStop": true,
+		"refuelingAllowed": true,
+		"setupChangesDuringRace": false,
+		"damageEnabled": true,
+		"safetyCarEnabled": true,
+		"driverStintRules": true
+	  },
+	  "financials": {
+		"entryFee": 1500000,
+		"basePrizePool": 90000000,
+		"championPrize": 18000000,
+		"averageTravelCostPerRound": 1200000
+	  },
+	  "calendar": [
+		{
+		  "round": 1,
+		  "name": "Spa 6 Hours",
+		  "trackId": "spa_francorchamps",
+		  "month": 4,
+		  "durationHours": 6
+		},
+		{
+		  "round": 2,
+		  "name": "Le Mans 24 Hours",
+		  "trackId": "le_mans",
+		  "month": 6,
+		  "durationHours": 24
+		},
+		{
+		  "round": 3,
+		  "name": "Monza 6 Hours",
+		  "trackId": "monza",
+		  "month": 7,
+		  "durationHours": 6
+		},
+		{
+		  "round": 4,
+		  "name": "Fuji/Suzuka Endurance",
+		  "trackId": "suzuka",
+		  "month": 9,
+		  "durationHours": 6
+		},
+		{
+		  "round": 5,
+		  "name": "São Paulo 6 Hours",
+		  "trackId": "interlagos",
+		  "month": 10,
+		  "durationHours": 6
+		}
+	  ],
+	  "progressionImpact": {
+		"licenseExperienceGain": 2.8,
+		"reputationGainMultiplier": 2.4,
+		"scoutingVisibility": "global_elite"
+	  }
+	},
+	{
+	  "id": "champ_indycar_series",
+	  "name": "IndyCar Series",
+	  "categoryId": "indycar",
+	  "type": "top_oval_formula",
+	  "regionScope": "north_america",
+	  "countryScope": [
+		"USA",
         "CAN"
-      ],
-      "minimumLicenseId": "FIA_A",
-      "minimumAge": 18,
-      "prestige": 90,
-      "teamCount": 13,
-      "driversPerTeam": 2,
-      "calendarStyle": "mixed_oval_road",
-      "pointSystemId": "oval_top12",
-      "seasonRules": {
-        "practiceSessions": 2,
-        "qualifyingFormat": "track_specific",
-        "raceFormat": "mixed_calendar",
-        "mandatoryPitStop": true,
-        "refuelingAllowed": true,
-        "setupChangesDuringRace": false,
-        "damageEnabled": true,
-        "safetyCarEnabled": true,
-        "ovalSpecializationImpact": true
-      },
-      "financials": {
-        "entryFee": 1200000,
-        "basePrizePool": 70000000,
-        "championPrize": 12000000,
-        "averageTravelCostPerRound": 900000
-      },
-      "calendar": [
-        {
-          "round": 1,
-          "name": "Daytona Road Invitational",
-          "trackId": "daytona_road",
-          "month": 3
-        },
-        {
-          "round": 2,
-          "name": "Indianapolis 500",
-          "trackId": "indianapolis_oval",
-          "month": 5
-        },
-        {
-          "round": 3,
-          "name": "Daytona Oval 300",
-          "trackId": "daytona_oval",
-          "month": 7
-        },
-        {
-          "round": 4,
-          "name": "Interlagos Challenge",
-          "trackId": "interlagos",
-          "month": 9
-        },
-        {
-          "round": 5,
-          "name": "Indianapolis Finale",
-          "trackId": "indianapolis_oval",
-          "month": 10
-        }
-      ],
-      "progressionImpact": {
-        "licenseExperienceGain": 2.6,
-        "reputationGainMultiplier": 2.2,
-        "scoutingVisibility": "global_elite"
-      }
-    }
+	  ],
+	  "minimumLicenseId": "FIA_A",
+	  "minimumAge": 18,
+	  "prestige": 90,
+	  "teamCount": 13,
+	  "driversPerTeam": 2,
+	  "calendarStyle": "mixed_oval_road",
+	  "pointSystemId": "oval_top12",
+	  "seasonRules": {
+		"practiceSessions": 2,
+		"qualifyingFormat": "track_specific",
+		"raceFormat": "mixed_calendar",
+		"mandatoryPitStop": true,
+		"refuelingAllowed": true,
+		"setupChangesDuringRace": false,
+		"damageEnabled": true,
+		"safetyCarEnabled": true,
+		"ovalSpecializationImpact": true
+	  },
+	  "financials": {
+		"entryFee": 1200000,
+		"basePrizePool": 70000000,
+		"championPrize": 12000000,
+		"averageTravelCostPerRound": 900000
+	  },
+	  "calendar": [
+		{
+		  "round": 1,
+		  "name": "Daytona Road Invitational",
+		  "trackId": "daytona_road",
+		  "month": 3
+		},
+		{
+		  "round": 2,
+		  "name": "Indianapolis 500",
+		  "trackId": "indianapolis_oval",
+		  "month": 5
+		},
+		{
+		  "round": 3,
+		  "name": "Daytona Oval 300",
+		  "trackId": "daytona_oval",
+		  "month": 7
+		},
+		{
+		  "round": 4,
+		  "name": "Interlagos Challenge",
+		  "trackId": "interlagos",
+		  "month": 9
+		},
+		{
+		  "round": 5,
+		  "name": "Indianapolis Finale",
+		  "trackId": "indianapolis_oval",
+		  "month": 10
+		}
+	  ],
+	  "progressionImpact": {
+		"licenseExperienceGain": 2.6,
+		"reputationGainMultiplier": 2.2,
+		"scoutingVisibility": "global_elite"
+	  }
+	}
   ],
   "exampleUsage": {
-    "worldEngine": "Carrega campeonatos ativos e gera eventos no calendário anual.",
-    "championshipEngine": "Calcula calendário, pontuação, classificação, premiações e elegibilidade.",
-    "teamEngine": "Usa teamCount, driversPerTeam e financials para montar vagas e orçamentos.",
-    "raceEngine": "Usa seasonRules e calendar.trackId para executar treinos, classificação e corrida.",
-    "driverEngine": "Usa progressionImpact para evolução de reputação, experiência e elegibilidade futura."
+	"worldEngine": "Carrega campeonatos ativos e gera eventos no calendário anual.",
+	"championshipEngine": "Calcula calendário, pontuação, classificação, premiações e elegibilidade.",
+	"teamEngine": "Usa teamCount, driversPerTeam e financials para montar vagas e orçamentos.",
+	"raceEngine": "Usa seasonRules e calendar.trackId para executar treinos, classificação e corrida.",
+	"driverEngine": "Usa progressionImpact para evolução de reputação, experiência e elegibilidade futura."
   }
 }
