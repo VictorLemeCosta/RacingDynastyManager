@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "0.1.0",
+  "game": "Racing Dynasty Manager",
+  "file": "teams.json",
+  "description": "Base inicial de equipes do universo do jogo.",
+  "teams": [
+    {
+      "id": "phoenix_f4",
+      "name": "Phoenix Racing",
+      "countryId": "GBR",
+      "championshipId": "champ_formula_4_international",
+      "categoryId": "formula_4",
+      "prestige": 42,
+      "budget": 1400000,
+      "color": "#FF6B00",
+      "infrastructure": {
+        "factory": 45,
+        "simulator": 35,
+        "dataCenter": 40,
+        "academy": 50
+      },
+      "carPerformance": {
+        "engine": 52,
+        "aero": 48,
+        "reliability": 47,
+        "chassis": 50
+      },
+      "staffSlots": {
+        "raceEngineers": 2,
+        "mechanics": 8,
+        "scouts": 1
+      }
+    },
+    {
+      "id": "falcon_f4",
+      "name": "Falcon Motorsport",
+      "countryId": "ITA",
+      "championshipId": "champ_formula_4_international",
+      "categoryId": "formula_4",
+      "prestige": 55,
+      "budget": 1900000,
+      "color": "#0047AB"
+    },
+    {
+      "id": "titan_stock",
+      "name": "Titan Performance Racing",
+      "countryId": "BRA",
+      "championshipId": "champ_stock_car_brazil",
+      "categoryId": "stock_car",
+      "prestige": 68,
+      "budget": 5200000,
+      "color": "#E10600",
+      "infrastructure": {
+        "factory": 72,
+        "simulator": 65,
+        "dataCenter": 70,
+        "academy": 40
+      }
+    },
+    {
+      "id": "verde_speed",
+      "name": "Verde Speed Team",
+      "countryId": "BRA",
+      "championshipId": "champ_stock_car_brazil",
+      "categoryId": "stock_car",
+      "prestige": 60,
+      "budget": 4100000,
+      "color": "#00A651"
+    },
+    {
+      "id": "aurora_hypercar",
+      "name": "Aurora Hypercar Racing",
+      "countryId": "DEU",
+      "championshipId": "champ_wec_hypercar_world",
+      "categoryId": "wec_hypercar",
+      "prestige": 90,
+      "budget": 85000000,
+      "color": "#111827",
+      "manufacturer": "Aurora Automotive"
+    },
+    {
+      "id": "zenith_hypercar",
+      "name": "Zenith Endurance Works",
+      "countryId": "JPN",
+      "championshipId": "champ_wec_hypercar_world",
+      "categoryId": "wec_hypercar",
+      "prestige": 88,
+      "budget": 78000000,
+      "color": "#7C3AED"
+    },
+    {
+      "id": "atlas_gp",
+      "name": "Atlas Grand Prix",
+      "countryId": "GBR",
+      "championshipId": "champ_formula_1_world",
+      "categoryId": "formula_1",
+      "prestige": 98,
+      "budget": 240000000,
+      "color": "#1D4ED8",
+      "carPerformance": {
+        "engine": 92,
+        "aero": 95,
+        "reliability": 90,
+        "chassis": 96
+      }
+    },
+    {
+      "id": "nova_f1",
+      "name": "Nova Racing F1 Team",
+      "countryId": "ITA",
+      "championshipId": "champ_formula_1_world",
+      "categoryId": "formula_1",
+      "prestige": 94,
+      "budget": 210000000,
+      "color": "#DC2626"
+    },
+    {
+      "id": "liberty_indy",
+      "name": "Liberty Indy Racing",
+      "countryId": "USA",
+      "championshipId": "champ_indycar_series",
+      "categoryId": "indycar",
+      "prestige": 84,
+      "budget": 42000000,
+      "color": "#2563EB"
+    },
+    {
+      "id": "eagle_oval",
+      "name": "Eagle Oval Motorsport",
+      "countryId": "USA",
+      "championshipId": "champ_indycar_series",
+      "categoryId": "indycar",
+      "prestige": 80,
+      "budget": 36000000,
+      "color": "#F59E0B"
+    }
+  ],
+  "exampleUsage": {
+    "driverEngine": "pilotos assinam contratos com equipes usando team.id",
+    "economyEngine": "budget define capacidade financeira e desenvolvimento",
+    "championshipEngine": "championshipId define onde a equipe compete",
+    "aiEngine": "prestige e budget influenciam contratações"
+  }
+}

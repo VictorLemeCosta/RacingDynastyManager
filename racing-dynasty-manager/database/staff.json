@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "0.1.0",
+  "game": "Racing Dynasty Manager",
+  "file": "staff.json",
+  "description": "Base inicial de funcionários e especialistas do universo do jogo.",
+  "staff": [
+    {
+      "id": "staff_adrian_clarke",
+      "firstName": "Adrian",
+      "lastName": "Clarke",
+      "countryId": "GBR",
+      "role": "technical_director",
+      "currentTeamId": "atlas_gp",
+      "reputation": 95,
+      "salary": 4500000,
+      "attributes": {
+        "leadership": 92,
+        "aerodynamics": 96,
+        "mechanicalEngineering": 88,
+        "development": 94,
+        "negotiation": 70
+      }
+    },
+    {
+      "id": "staff_lorenzo_ferrari",
+      "firstName": "Lorenzo",
+      "lastName": "Ferrari",
+      "countryId": "ITA",
+      "role": "race_engineer",
+      "currentTeamId": "nova_f1",
+      "reputation": 89,
+      "salary": 1800000,
+      "attributes": {
+        "communication": 92,
+        "setup": 90,
+        "strategy": 86,
+        "dataAnalysis": 88,
+        "driverRelationship": 91
+      }
+    },
+    {
+      "id": "staff_paulo_nogueira",
+      "firstName": "Paulo",
+      "lastName": "Nogueira",
+      "countryId": "BRA",
+      "role": "team_manager",
+      "currentTeamId": "titan_stock",
+      "reputation": 74,
+      "salary": 600000,
+      "attributes": {
+        "leadership": 82,
+        "finance": 76,
+        "negotiation": 84,
+        "marketing": 68,
+        "talentScouting": 60
+      }
+    },
+    {
+      "id": "staff_hiro_sato",
+      "firstName": "Hiro",
+      "lastName": "Sato",
+      "countryId": "JPN",
+      "role": "head_of_strategy",
+      "currentTeamId": "zenith_hypercar",
+      "reputation": 87,
+      "salary": 1200000,
+      "attributes": {
+        "strategy": 94,
+        "probabilityAnalysis": 88,
+        "riskManagement": 91,
+        "communication": 80
+      }
+    },
+    {
+      "id": "staff_erika_muller",
+      "firstName": "Erika",
+      "lastName": "Muller",
+      "countryId": "DEU",
+      "role": "head_of_aero",
+      "currentTeamId": "aurora_hypercar",
+      "reputation": 90,
+      "salary": 1500000,
+      "attributes": {
+        "aerodynamics": 95,
+        "innovation": 89,
+        "development": 87,
+        "leadership": 82
+      }
+    },
+    {
+      "id": "staff_josh_miller",
+      "firstName": "Josh",
+      "lastName": "Miller",
+      "countryId": "USA",
+      "role": "chief_mechanic",
+      "currentTeamId": "liberty_indy",
+      "reputation": 78,
+      "salary": 550000,
+      "attributes": {
+        "pitStops": 88,
+        "reliability": 82,
+        "repairSpeed": 86,
+        "leadership": 74
+      }
+    },
+    {
+      "id": "staff_sophia_brown",
+      "firstName": "Sophia",
+      "lastName": "Brown",
+      "countryId": "GBR",
+      "role": "scout",
+      "currentTeamId": "phoenix_f4",
+      "reputation": 62,
+      "salary": 180000,
+      "attributes": {
+        "talentDetection": 91,
+        "network": 80,
+        "negotiation": 65,
+        "analysis": 84
+      }
+    },
+    {
+      "id": "staff_carla_mendes",
+      "firstName": "Carla",
+      "lastName": "Mendes",
+      "countryId": "BRA",
+      "role": "commercial_director",
+      "currentTeamId": "verde_speed",
+      "reputation": 70,
+      "salary": 420000,
+      "attributes": {
+        "marketing": 90,
+        "sponsorship": 88,
+        "negotiation": 85,
+        "publicRelations": 81
+      }
+    }
+  ],
+  "exampleUsage": {
+    "currentTeamId": "referencia teams.json",
+    "technical_director": "afeta desenvolvimento do carro",
+    "race_engineer": "afeta setup, estratégia e desempenho de piloto",
+    "scout": "afeta descoberta de jovens talentos",
+    "commercial_director": "afeta patrocínios e receitas"
+  }
+}

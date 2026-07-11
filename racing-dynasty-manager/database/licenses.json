@@ -1,0 +1,442 @@
+{
+  "schemaVersion": "0.1.0",
+  "game": "Racing Dynasty Manager",
+  "file": "licenses.json",
+  "description": "Base inicial de licenças de piloto. Define hierarquia, requisitos, permissões de categorias e regras de progressão.",
+  "designNotes": [
+    "Este arquivo representa a base estática de licenças do universo do jogo.",
+    "As categorias permitidas devem bater com os IDs usados futuramente em categories.json.",
+    "Os requisitos ainda são exemplos iniciais e poderão ser ajustados no balanceamento.",
+    "A licença define elegibilidade mínima, mas não garante que uma equipe contratará o piloto. Contratação também dependerá de reputação, atributos, especialização, orçamento e mercado."
+  ],
+  "licenseOrder": [
+    "KART_REGIONAL",
+    "KART_NATIONAL",
+    "KART_INTERNATIONAL",
+    "AUTO_NATIONAL",
+    "FIA_D",
+    "FIA_C",
+    "FIA_B",
+    "FIA_A",
+    "FIA_SUPER_LICENSE"
+  ],
+  "licenses": [
+    {
+      "id": "KART_REGIONAL",
+      "name": "Licença de Kart Regional",
+      "tier": 1,
+      "type": "kart",
+      "issuingBodies": [
+        "CBA",
+        "Federação estadual/regional",
+        "Comitê regional de automobilismo",
+        "Equivalentes internacionais fictícios"
+      ],
+      "description": "Licença inicial para pilotos que competem em campeonatos locais e regionais de kart.",
+      "minimumAge": 13,
+      "validForCategoryTypes": [
+        "kart"
+      ],
+      "allowedCategoryIds": [
+        "kart_indoor_regional",
+        "kart_regional"
+      ],
+      "progressionRequirements": {
+        "minimumRaces": 6,
+        "minimumRaceHours": 4,
+        "minimumReputation": 0,
+        "minimumAverageResultPercentile": 60,
+        "requiredPreviousLicenseId": null,
+        "requiredAttributes": {
+          "discipline": 35,
+          "racecraft": 25
+        }
+      },
+      "renewal": {
+        "expiresAfterSeasons": 2,
+        "renewalCost": 500,
+        "requiresMedicalCheck": false
+      },
+      "riskRules": {
+        "canBeSuspended": true,
+        "disciplinaryPointsLimit": 12
+      }
+    },
+    {
+      "id": "KART_NATIONAL",
+      "name": "Licença de Kart Nacional",
+      "tier": 2,
+      "type": "kart",
+      "issuingBodies": [
+        "CBA",
+        "Confederação nacional de automobilismo",
+        "Equivalentes nacionais fictícios"
+      ],
+      "description": "Licença para campeonatos nacionais de kart e eventos de maior competitividade.",
+      "minimumAge": 14,
+      "validForCategoryTypes": [
+        "kart"
+      ],
+      "allowedCategoryIds": [
+        "kart_indoor_regional",
+        "kart_regional",
+        "kart_national"
+      ],
+      "progressionRequirements": {
+        "minimumRaces": 12,
+        "minimumRaceHours": 10,
+        "minimumReputation": 5,
+        "minimumAverageResultPercentile": 55,
+        "requiredPreviousLicenseId": "KART_REGIONAL",
+        "requiredAttributes": {
+          "discipline": 40,
+          "racecraft": 35,
+          "consistency": 35
+        }
+      },
+      "renewal": {
+        "expiresAfterSeasons": 2,
+        "renewalCost": 1500,
+        "requiresMedicalCheck": false
+      },
+      "riskRules": {
+        "canBeSuspended": true,
+        "disciplinaryPointsLimit": 10
+      }
+    },
+    {
+      "id": "KART_INTERNATIONAL",
+      "name": "Licença Internacional de Kart",
+      "tier": 3,
+      "type": "kart",
+      "issuingBodies": [
+        "FIA",
+        "CBA",
+        "Autoridade nacional reconhecida",
+        "Equivalentes internacionais fictícios"
+      ],
+      "description": "Licença para campeonatos internacionais de kart e porta de entrada para categorias de base no automobilismo.",
+      "minimumAge": 15,
+      "validForCategoryTypes": [
+        "kart",
+        "entry_formula"
+      ],
+      "allowedCategoryIds": [
+        "kart_national",
+        "kart_international",
+        "formula_delta"
+      ],
+      "progressionRequirements": {
+        "minimumRaces": 20,
+        "minimumRaceHours": 18,
+        "minimumReputation": 12,
+        "minimumAverageResultPercentile": 50,
+        "requiredPreviousLicenseId": "KART_NATIONAL",
+        "requiredAttributes": {
+          "discipline": 45,
+          "racecraft": 45,
+          "consistency": 40,
+          "adaptability": 35
+        }
+      },
+      "renewal": {
+        "expiresAfterSeasons": 2,
+        "renewalCost": 3500,
+        "requiresMedicalCheck": true
+      },
+      "riskRules": {
+        "canBeSuspended": true,
+        "disciplinaryPointsLimit": 10
+      }
+    },
+    {
+      "id": "AUTO_NATIONAL",
+      "name": "Licença Nacional de Automobilismo",
+      "tier": 4,
+      "type": "national_auto",
+      "issuingBodies": [
+        "CBA",
+        "Confederação nacional de automobilismo",
+        "Autoridade nacional fictícia"
+      ],
+      "description": "Licença para categorias nacionais de base, turismo nacional e transição do kart para carros.",
+      "minimumAge": 16,
+      "validForCategoryTypes": [
+        "entry_formula",
+        "touring",
+        "national_gt"
+      ],
+      "allowedCategoryIds": [
+        "formula_delta",
+        "touring_national",
+        "stock_light",
+        "gt_national"
+      ],
+      "progressionRequirements": {
+        "minimumRaces": 24,
+        "minimumRaceHours": 25,
+        "minimumReputation": 18,
+        "minimumAverageResultPercentile": 50,
+        "requiredPreviousLicenseId": "KART_INTERNATIONAL",
+        "requiredAttributes": {
+          "discipline": 50,
+          "racecraft": 48,
+          "consistency": 45,
+          "adaptability": 45
+        }
+      },
+      "renewal": {
+        "expiresAfterSeasons": 2,
+        "renewalCost": 7000,
+        "requiresMedicalCheck": true
+      },
+      "riskRules": {
+        "canBeSuspended": true,
+        "disciplinaryPointsLimit": 9
+      }
+    },
+    {
+      "id": "FIA_D",
+      "name": "Licença Internacional Grau D",
+      "tier": 5,
+      "type": "international_auto",
+      "issuingBodies": [
+        "FIA",
+        "Autoridade nacional reconhecida"
+      ],
+      "description": "Licença internacional de entrada para categorias FIA de base e algumas competições de F4.",
+      "minimumAge": 15,
+      "validForCategoryTypes": [
+        "entry_formula",
+        "formula",
+        "touring"
+      ],
+      "allowedCategoryIds": [
+        "formula_delta",
+        "formula_4",
+        "touring_national"
+      ],
+      "progressionRequirements": {
+        "minimumRaces": 28,
+        "minimumRaceHours": 35,
+        "minimumReputation": 22,
+        "minimumAverageResultPercentile": 48,
+        "requiredPreviousLicenseId": "AUTO_NATIONAL",
+        "requiredAttributes": {
+          "discipline": 55,
+          "racecraft": 52,
+          "consistency": 50,
+          "adaptability": 50
+        }
+      },
+      "renewal": {
+        "expiresAfterSeasons": 2,
+        "renewalCost": 12000,
+        "requiresMedicalCheck": true
+      },
+      "riskRules": {
+        "canBeSuspended": true,
+        "disciplinaryPointsLimit": 8
+      }
+    },
+    {
+      "id": "FIA_C",
+      "name": "Licença Internacional Grau C",
+      "tier": 6,
+      "type": "international_auto",
+      "issuingBodies": [
+        "FIA",
+        "Autoridade nacional reconhecida"
+      ],
+      "description": "Licença para F4, GT4, Porsche Cup, categorias de turismo fortes e endurance de base.",
+      "minimumAge": 16,
+      "validForCategoryTypes": [
+        "formula",
+        "gt",
+        "touring",
+        "base_endurance"
+      ],
+      "allowedCategoryIds": [
+        "formula_4",
+        "formula_regional",
+        "gt4",
+        "porsche_cup",
+        "stock_car",
+        "tcr",
+        "endurance_base"
+      ],
+      "progressionRequirements": {
+        "minimumRaces": 36,
+        "minimumRaceHours": 50,
+        "minimumReputation": 30,
+        "minimumAverageResultPercentile": 45,
+        "requiredPreviousLicenseId": "FIA_D",
+        "requiredAttributes": {
+          "discipline": 60,
+          "racecraft": 58,
+          "consistency": 55,
+          "adaptability": 55
+        }
+      },
+      "renewal": {
+        "expiresAfterSeasons": 2,
+        "renewalCost": 20000,
+        "requiresMedicalCheck": true
+      },
+      "riskRules": {
+        "canBeSuspended": true,
+        "disciplinaryPointsLimit": 8
+      }
+    },
+    {
+      "id": "FIA_B",
+      "name": "Licença Internacional Grau B",
+      "tier": 7,
+      "type": "international_auto",
+      "issuingBodies": [
+        "FIA",
+        "Autoridade nacional reconhecida"
+      ],
+      "description": "Licença para F3, GT3, endurance internacional e categorias de alto desenvolvimento técnico.",
+      "minimumAge": 17,
+      "validForCategoryTypes": [
+        "formula",
+        "gt",
+        "endurance",
+        "oval"
+      ],
+      "allowedCategoryIds": [
+        "formula_3",
+        "gt3",
+        "elms",
+        "imsa_lmp2",
+        "indy_nxt"
+      ],
+      "progressionRequirements": {
+        "minimumRaces": 48,
+        "minimumRaceHours": 75,
+        "minimumReputation": 42,
+        "minimumAverageResultPercentile": 42,
+        "requiredPreviousLicenseId": "FIA_C",
+        "requiredAttributes": {
+          "discipline": 65,
+          "racecraft": 64,
+          "consistency": 62,
+          "adaptability": 60,
+          "technicalFeedback": 50
+        }
+      },
+      "renewal": {
+        "expiresAfterSeasons": 2,
+        "renewalCost": 35000,
+        "requiresMedicalCheck": true
+      },
+      "riskRules": {
+        "canBeSuspended": true,
+        "disciplinaryPointsLimit": 7
+      }
+    },
+    {
+      "id": "FIA_A",
+      "name": "Licença Internacional Grau A",
+      "tier": 8,
+      "type": "international_auto",
+      "issuingBodies": [
+        "FIA",
+        "Autoridade nacional reconhecida"
+      ],
+      "description": "Licença para F2, WEC, IndyCar, IMSA de alto nível e categorias internacionais de ponta fora da F1.",
+      "minimumAge": 18,
+      "validForCategoryTypes": [
+        "formula",
+        "gt",
+        "endurance",
+        "oval",
+        "top_touring"
+      ],
+      "allowedCategoryIds": [
+        "formula_2",
+        "wec_lmp2",
+        "wec_hypercar",
+        "imsa_gtd_pro",
+        "imsa_gtp",
+        "indycar",
+        "nascar_cup"
+      ],
+      "progressionRequirements": {
+        "minimumRaces": 65,
+        "minimumRaceHours": 110,
+        "minimumReputation": 58,
+        "minimumAverageResultPercentile": 38,
+        "requiredPreviousLicenseId": "FIA_B",
+        "requiredAttributes": {
+          "discipline": 72,
+          "racecraft": 70,
+          "consistency": 68,
+          "adaptability": 65,
+          "technicalFeedback": 60
+        }
+      },
+      "renewal": {
+        "expiresAfterSeasons": 2,
+        "renewalCost": 60000,
+        "requiresMedicalCheck": true
+      },
+      "riskRules": {
+        "canBeSuspended": true,
+        "disciplinaryPointsLimit": 7
+      }
+    },
+    {
+      "id": "FIA_SUPER_LICENSE",
+      "name": "Super Licença FIA",
+      "tier": 9,
+      "type": "super_license",
+      "issuingBodies": [
+        "FIA"
+      ],
+      "description": "Licença máxima exigida para competir na Formula 1 dentro do universo do jogo.",
+      "minimumAge": 18,
+      "validForCategoryTypes": [
+        "formula",
+        "top_formula"
+      ],
+      "allowedCategoryIds": [
+        "formula_1"
+      ],
+      "progressionRequirements": {
+        "minimumRaces": 80,
+        "minimumRaceHours": 150,
+        "minimumReputation": 75,
+        "minimumAverageResultPercentile": 30,
+        "requiredPreviousLicenseId": "FIA_A",
+        "requiredAttributes": {
+          "discipline": 80,
+          "racecraft": 78,
+          "consistency": 76,
+          "adaptability": 72,
+          "technicalFeedback": 68,
+          "pressureHandling": 70
+        },
+        "superLicensePoints": {
+          "required": 40,
+          "windowInSeasons": 3
+        }
+      },
+      "renewal": {
+        "expiresAfterSeasons": 1,
+        "renewalCost": 120000,
+        "requiresMedicalCheck": true
+      },
+      "riskRules": {
+        "canBeSuspended": true,
+        "disciplinaryPointsLimit": 6
+      }
+    }
+  ],
+  "exampleUsage": {
+    "canDriverEnterCategoryRule": "driver.license.tier >= category.minimumLicenseTier AND category.id IN license.allowedCategoryIds",
+    "progressionRule": "License Engine avalia corridas, horas, reputação, resultados, atributos, idade mínima e licença anterior.",
+    "contractRule": "Mesmo elegível por licença, o piloto ainda precisa atender requisitos de mercado, reputação, orçamento e interesse da equipe."
+  }
+}

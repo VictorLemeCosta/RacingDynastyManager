@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "0.1.0",
+  "game": "Racing Dynasty Manager",
+  "file": "tracks.json",
+  "description": "Base inicial de pistas e circuitos do universo do jogo.",
+  "tracks": [
+    {
+      "id": "interlagos",
+      "name": "Autódromo José Carlos Pace",
+      "countryId": "BRA",
+      "city": "São Paulo",
+      "type": "road_course",
+      "lengthKm": 4.309,
+      "turns": 15,
+      "prestige": 95,
+      "drivingStyle": "balanced",
+      "overtakingDifficulty": 6,
+      "tyreWear": 7,
+      "fuelConsumption": 6,
+      "weatherVariability": 9,
+      "supportedCategories": [
+        "formula",
+        "gt",
+        "touring",
+        "endurance"
+      ]
+    },
+    {
+      "id": "silverstone",
+      "name": "Silverstone Circuit",
+      "countryId": "GBR",
+      "city": "Silverstone",
+      "type": "road_course",
+      "lengthKm": 5.891,
+      "turns": 18,
+      "prestige": 100,
+      "drivingStyle": "high_speed",
+      "overtakingDifficulty": 4,
+      "tyreWear": 6,
+      "fuelConsumption": 7,
+      "weatherVariability": 8,
+      "supportedCategories": [
+        "formula",
+        "gt",
+        "endurance"
+      ]
+    },
+    {
+      "id": "spa_francorchamps",
+      "name": "Spa-Francorchamps",
+      "countryId": "BEL",
+      "city": "Spa",
+      "type": "road_course",
+      "lengthKm": 7.004,
+      "turns": 19,
+      "prestige": 100,
+      "drivingStyle": "high_speed",
+      "overtakingDifficulty": 5,
+      "tyreWear": 5,
+      "fuelConsumption": 8,
+      "weatherVariability": 10,
+      "supportedCategories": [
+        "formula",
+        "gt",
+        "endurance"
+      ]
+    },
+    {
+      "id": "monza",
+      "name": "Autodromo Nazionale Monza",
+      "countryId": "ITA",
+      "city": "Monza",
+      "type": "road_course",
+      "lengthKm": 5.793,
+      "turns": 11,
+      "prestige": 98,
+      "drivingStyle": "top_speed",
+      "overtakingDifficulty": 3,
+      "tyreWear": 4,
+      "fuelConsumption": 8,
+      "weatherVariability": 5,
+      "supportedCategories": [
+        "formula",
+        "gt",
+        "endurance"
+      ]
+    },
+    {
+      "id": "suzuka",
+      "name": "Suzuka Circuit",
+      "countryId": "JPN",
+      "city": "Suzuka",
+      "type": "road_course",
+      "lengthKm": 5.807,
+      "turns": 18,
+      "prestige": 97,
+      "drivingStyle": "technical",
+      "overtakingDifficulty": 7,
+      "tyreWear": 8,
+      "fuelConsumption": 6,
+      "weatherVariability": 7,
+      "supportedCategories": [
+        "formula",
+        "gt"
+      ]
+    },
+    {
+      "id": "daytona_road",
+      "name": "Daytona Road Course",
+      "countryId": "USA",
+      "city": "Daytona Beach",
+      "type": "road_course",
+      "lengthKm": 5.729,
+      "turns": 12,
+      "prestige": 90,
+      "drivingStyle": "mixed",
+      "overtakingDifficulty": 4,
+      "tyreWear": 6,
+      "fuelConsumption": 7,
+      "weatherVariability": 4,
+      "supportedCategories": [
+        "gt",
+        "endurance"
+      ]
+    },
+    {
+      "id": "le_mans",
+      "name": "Circuit de la Sarthe",
+      "countryId": "FRA",
+      "city": "Le Mans",
+      "type": "endurance",
+      "lengthKm": 13.626,
+      "turns": 38,
+      "prestige": 100,
+      "drivingStyle": "endurance",
+      "overtakingDifficulty": 5,
+      "tyreWear": 5,
+      "fuelConsumption": 9,
+      "weatherVariability": 6,
+      "supportedCategories": [
+        "endurance"
+      ]
+    },
+    {
+      "id": "indianapolis_oval",
+      "name": "Indianapolis Motor Speedway Oval",
+      "countryId": "USA",
+      "city": "Indianapolis",
+      "type": "oval",
+      "lengthKm": 4.023,
+      "turns": 4,
+      "prestige": 99,
+      "drivingStyle": "oval",
+      "overtakingDifficulty": 6,
+      "tyreWear": 8,
+      "fuelConsumption": 7,
+      "weatherVariability": 4,
+      "supportedCategories": [
+        "oval"
+      ]
+    },
+    {
+      "id": "daytona_oval",
+      "name": "Daytona International Speedway",
+      "countryId": "USA",
+      "city": "Daytona Beach",
+      "type": "oval",
+      "lengthKm": 4.0,
+      "turns": 4,
+      "prestige": 95,
+      "drivingStyle": "drafting",
+      "overtakingDifficulty": 2,
+      "tyreWear": 6,
+      "fuelConsumption": 7,
+      "weatherVariability": 3,
+      "supportedCategories": [
+        "oval"
+      ]
+    },
+    {
+      "id": "goiania",
+      "name": "Autódromo Internacional de Goiânia",
+      "countryId": "BRA",
+      "city": "Goiânia",
+      "type": "road_course",
+      "lengthKm": 3.835,
+      "turns": 15,
+      "prestige": 55,
+      "drivingStyle": "touring",
+      "overtakingDifficulty": 6,
+      "tyreWear": 7,
+      "fuelConsumption": 5,
+      "weatherVariability": 4,
+      "supportedCategories": [
+        "touring",
+        "stock_car",
+        "gt"
+      ]
+    }
+  ],
+  "exampleUsage": {
+    "championships": "championships.json referencia tracks.id para montar calendários",
+    "raceEngine": "Race Engine utiliza desgaste, ultrapassagem, clima e consumo",
+    "ai": "IA ajusta estratégia conforme características da pista"
+  }
+}

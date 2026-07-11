@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "0.1.0",
+  "game": "Racing Dynasty Manager",
+  "file": "sponsors.json",
+  "description": "Base inicial de patrocinadores do universo do jogo.",
+  "sponsorTypes": [
+    "title",
+    "primary",
+    "secondary",
+    "technical",
+    "personal_driver"
+  ],
+  "sponsors": [
+    {
+      "id": "sponsor_nexora",
+      "name": "Nexora Technologies",
+      "countryId": "USA",
+      "industry": "Technology",
+      "type": "title",
+      "annualValue": 12000000,
+      "targetTeamId": "atlas_gp",
+      "minimumPrestige": 85,
+      "contractLengthYears": 3,
+      "objectives": [
+        "Top 5 no campeonato",
+        "Alta exposição global"
+      ]
+    },
+    {
+      "id": "sponsor_velaris_energy",
+      "name": "Velaris Energy",
+      "countryId": "GBR",
+      "industry": "Energy",
+      "type": "primary",
+      "annualValue": 8000000,
+      "targetTeamId": "nova_f1",
+      "minimumPrestige": 80,
+      "contractLengthYears": 2,
+      "objectives": [
+        "Pontuar regularmente"
+      ]
+    },
+    {
+      "id": "sponsor_bravox_bank",
+      "name": "Bravox Bank",
+      "countryId": "BRA",
+      "industry": "Finance",
+      "type": "title",
+      "annualValue": 2500000,
+      "targetTeamId": "titan_stock",
+      "minimumPrestige": 55,
+      "contractLengthYears": 2,
+      "objectives": [
+        "Top 3 Stock Car"
+      ]
+    },
+    {
+      "id": "sponsor_greenleaf",
+      "name": "GreenLeaf Biofuel",
+      "countryId": "BRA",
+      "industry": "Biofuel",
+      "type": "primary",
+      "annualValue": 1400000,
+      "targetTeamId": "verde_speed",
+      "minimumPrestige": 45,
+      "contractLengthYears": 2,
+      "objectives": [
+        "Top 10 campeonato"
+      ]
+    },
+    {
+      "id": "sponsor_zencom",
+      "name": "ZenCom Electronics",
+      "countryId": "JPN",
+      "industry": "Electronics",
+      "type": "technical",
+      "annualValue": 9000000,
+      "targetTeamId": "zenith_hypercar",
+      "minimumPrestige": 80,
+      "contractLengthYears": 4,
+      "objectives": [
+        "Confiabilidade acima de 90%"
+      ]
+    },
+    {
+      "id": "sponsor_aurora_industries",
+      "name": "Aurora Industries",
+      "countryId": "DEU",
+      "industry": "Automotive",
+      "type": "title",
+      "annualValue": 15000000,
+      "targetTeamId": "aurora_hypercar",
+      "minimumPrestige": 85,
+      "contractLengthYears": 5,
+      "objectives": [
+        "Vitórias em endurance"
+      ]
+    },
+    {
+      "id": "sponsor_apex_lab",
+      "name": "Apex Performance Lab",
+      "countryId": "ITA",
+      "industry": "Sports Science",
+      "type": "personal_driver",
+      "annualValue": 500000,
+      "targetDriverId": "drv_matteo_rossi",
+      "contractLengthYears": 2,
+      "objectives": [
+        "Promoção para F3"
+      ]
+    },
+    {
+      "id": "sponsor_orbital_cloud",
+      "name": "Orbital Cloud Systems",
+      "countryId": "USA",
+      "industry": "Cloud Computing",
+      "type": "personal_driver",
+      "annualValue": 350000,
+      "targetDriverId": "drv_lucas_silva",
+      "contractLengthYears": 1,
+      "objectives": [
+        "Terminar temporada entre os 5 melhores"
+      ]
+    }
+  ],
+  "exampleUsage": {
+    "teamSponsors": "teams.json poderá armazenar sponsorIds",
+    "driverSponsors": "drivers.json poderá armazenar patrocinadores pessoais",
+    "economyEngine": "annualValue gera receitas periódicas",
+    "commercialDirector": "aumenta chance de novos contratos comerciais"
+  }
+}

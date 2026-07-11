@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "0.1.0",
+  "game": "Racing Dynasty Manager",
+  "file": "countries.json",
+  "description": "Base de países, nacionalidades e regiões esportivas do universo do jogo.",
+  "regions": [
+    {
+      "id": "south_america",
+      "name": "América do Sul"
+    },
+    {
+      "id": "north_america",
+      "name": "América do Norte"
+    },
+    {
+      "id": "europe",
+      "name": "Europa"
+    },
+    {
+      "id": "asia_pacific",
+      "name": "Ásia-Pacífico"
+    },
+    {
+      "id": "middle_east",
+      "name": "Oriente Médio"
+    }
+  ],
+  "countries": [
+    {
+      "id": "BRA",
+      "name": "Brasil",
+      "nationality": "Brasileiro",
+      "regionId": "south_america",
+      "motorsportCulture": 92,
+      "talentGeneration": 88,
+      "economicStrength": 72,
+      "preferredCategories": [
+        "kart",
+        "formula",
+        "touring",
+        "stock_car"
+      ],
+      "federation": "CBA"
+    },
+    {
+      "id": "ARG",
+      "name": "Argentina",
+      "nationality": "Argentino",
+      "regionId": "south_america",
+      "motorsportCulture": 85,
+      "talentGeneration": 80,
+      "economicStrength": 63,
+      "preferredCategories": [
+        "touring",
+        "formula",
+        "gt"
+      ],
+      "federation": "ACA"
+    },
+    {
+      "id": "USA",
+      "name": "Estados Unidos",
+      "nationality": "Americano",
+      "regionId": "north_america",
+      "motorsportCulture": 95,
+      "talentGeneration": 90,
+      "economicStrength": 100,
+      "preferredCategories": [
+        "indycar",
+        "nascar",
+        "imsa",
+        "gt"
+      ],
+      "federation": "ACCUS"
+    },
+    {
+      "id": "CAN",
+      "name": "Canadá",
+      "nationality": "Canadense",
+      "regionId": "north_america",
+      "motorsportCulture": 78,
+      "talentGeneration": 75,
+      "economicStrength": 90,
+      "preferredCategories": [
+        "formula",
+        "gt",
+        "endurance"
+      ],
+      "federation": "ASN Canada"
+    },
+    {
+      "id": "GBR",
+      "name": "Reino Unido",
+      "nationality": "Britânico",
+      "regionId": "europe",
+      "motorsportCulture": 100,
+      "talentGeneration": 98,
+      "economicStrength": 95,
+      "preferredCategories": [
+        "formula",
+        "gt",
+        "endurance"
+      ],
+      "federation": "Motorsport UK"
+    },
+    {
+      "id": "DEU",
+      "name": "Alemanha",
+      "nationality": "Alemão",
+      "regionId": "europe",
+      "motorsportCulture": 96,
+      "talentGeneration": 92,
+      "economicStrength": 96,
+      "preferredCategories": [
+        "gt",
+        "endurance",
+        "formula"
+      ],
+      "federation": "DMSB"
+    },
+    {
+      "id": "ITA",
+      "name": "Itália",
+      "nationality": "Italiano",
+      "regionId": "europe",
+      "motorsportCulture": 97,
+      "talentGeneration": 90,
+      "economicStrength": 88,
+      "preferredCategories": [
+        "formula",
+        "gt"
+      ],
+      "federation": "ACI Sport"
+    },
+    {
+      "id": "FRA",
+      "name": "França",
+      "nationality": "Francês",
+      "regionId": "europe",
+      "motorsportCulture": 88,
+      "talentGeneration": 87,
+      "economicStrength": 90,
+      "preferredCategories": [
+        "formula",
+        "endurance"
+      ],
+      "federation": "FFSA"
+    },
+    {
+      "id": "ESP",
+      "name": "Espanha",
+      "nationality": "Espanhol",
+      "regionId": "europe",
+      "motorsportCulture": 86,
+      "talentGeneration": 84,
+      "economicStrength": 82,
+      "preferredCategories": [
+        "formula",
+        "gt"
+      ],
+      "federation": "RFEDA"
+    },
+    {
+      "id": "JPN",
+      "name": "Japão",
+      "nationality": "Japonês",
+      "regionId": "asia_pacific",
+      "motorsportCulture": 94,
+      "talentGeneration": 89,
+      "economicStrength": 95,
+      "preferredCategories": [
+        "formula",
+        "gt",
+        "super_gt"
+      ],
+      "federation": "JAF"
+    },
+    {
+      "id": "AUS",
+      "name": "Austrália",
+      "nationality": "Australiano",
+      "regionId": "asia_pacific",
+      "motorsportCulture": 85,
+      "talentGeneration": 84,
+      "economicStrength": 88,
+      "preferredCategories": [
+        "supercars",
+        "formula",
+        "gt"
+      ],
+      "federation": "Motorsport Australia"
+    },
+    {
+      "id": "UAE",
+      "name": "Emirados Árabes Unidos",
+      "nationality": "Emiratense",
+      "regionId": "middle_east",
+      "motorsportCulture": 70,
+      "talentGeneration": 60,
+      "economicStrength": 98,
+      "preferredCategories": [
+        "formula",
+        "endurance"
+      ],
+      "federation": "ATCUAE"
+    }
+  ],
+  "exampleUsage": {
+    "driverNationality": "drivers.json referencia countries.id",
+    "teamCountry": "teams.json referencia countries.id",
+    "trackCountry": "tracks.json referencia countries.id",
+    "talentGeneration": "usado pela geração procedural de pilotos"
+  }
+}

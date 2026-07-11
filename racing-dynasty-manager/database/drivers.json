@@ -1,0 +1,253 @@
+{
+  "schemaVersion": "0.1.0",
+  "game": "Racing Dynasty Manager",
+  "file": "drivers.json",
+  "description": "Base inicial de pilotos do universo do jogo.",
+  "drivers": [
+    {
+      "id": "drv_lucas_silva",
+      "firstName": "Lucas",
+      "lastName": "Silva",
+      "countryId": "BRA",
+      "age": 16,
+      "licenseId": "FIA_D",
+      "specialization": "formula",
+      "currentTeamId": "phoenix_f4",
+      "potential": 91,
+      "reputation": 24,
+      "attributes": {
+        "talent": 76,
+        "racecraft": 73,
+        "consistency": 68,
+        "qualifying": 79,
+        "starts": 71,
+        "wetWeather": 66,
+        "tyreManagement": 62,
+        "fuelSaving": 58,
+        "technicalFeedback": 72
+      },
+      "hiddenAttributes": {
+        "motivation": 88,
+        "ego": 42,
+        "discipline": 80,
+        "adaptability": 82,
+        "aggressiveness": 70,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "drv_matteo_rossi",
+      "firstName": "Matteo",
+      "lastName": "Rossi",
+      "countryId": "ITA",
+      "age": 18,
+      "licenseId": "FIA_B",
+      "specialization": "formula",
+      "currentTeamId": "falcon_f4",
+      "potential": 88,
+      "reputation": 38,
+      "attributes": {
+        "talent": 81,
+        "racecraft": 78,
+        "consistency": 75,
+        "qualifying": 82,
+        "starts": 77,
+        "wetWeather": 72,
+        "tyreManagement": 70,
+        "fuelSaving": 61,
+        "technicalFeedback": 74
+      }
+    },
+    {
+      "id": "drv_rafael_costa",
+      "firstName": "Rafael",
+      "lastName": "Costa",
+      "countryId": "BRA",
+      "age": 27,
+      "licenseId": "FIA_C",
+      "specialization": "touring",
+      "currentTeamId": "titan_stock",
+      "potential": 82,
+      "reputation": 61,
+      "attributes": {
+        "talent": 80,
+        "racecraft": 83,
+        "consistency": 85,
+        "qualifying": 74,
+        "starts": 82,
+        "wetWeather": 76,
+        "tyreManagement": 84,
+        "fuelSaving": 79,
+        "technicalFeedback": 71
+      }
+    },
+    {
+      "id": "drv_gabriel_mendes",
+      "firstName": "Gabriel",
+      "lastName": "Mendes",
+      "countryId": "BRA",
+      "age": 22,
+      "licenseId": "FIA_C",
+      "specialization": "touring",
+      "currentTeamId": "verde_speed",
+      "potential": 86,
+      "reputation": 45,
+      "attributes": {
+        "talent": 78,
+        "racecraft": 77,
+        "consistency": 73,
+        "qualifying": 80,
+        "starts": 76,
+        "wetWeather": 68,
+        "tyreManagement": 71,
+        "fuelSaving": 69,
+        "technicalFeedback": 67
+      }
+    },
+    {
+      "id": "drv_hans_vogel",
+      "firstName": "Hans",
+      "lastName": "Vogel",
+      "countryId": "DEU",
+      "age": 31,
+      "licenseId": "FIA_A",
+      "specialization": "endurance",
+      "currentTeamId": "aurora_hypercar",
+      "potential": 90,
+      "reputation": 84,
+      "attributes": {
+        "talent": 89,
+        "racecraft": 87,
+        "consistency": 93,
+        "qualifying": 81,
+        "starts": 79,
+        "wetWeather": 88,
+        "tyreManagement": 92,
+        "fuelSaving": 91,
+        "technicalFeedback": 85
+      }
+    },
+    {
+      "id": "drv_kenji_tanaka",
+      "firstName": "Kenji",
+      "lastName": "Tanaka",
+      "countryId": "JPN",
+      "age": 29,
+      "licenseId": "FIA_A",
+      "specialization": "endurance",
+      "currentTeamId": "zenith_hypercar",
+      "potential": 89,
+      "reputation": 82,
+      "attributes": {
+        "talent": 87,
+        "racecraft": 84,
+        "consistency": 90,
+        "qualifying": 78,
+        "starts": 75,
+        "wetWeather": 81,
+        "tyreManagement": 89,
+        "fuelSaving": 90,
+        "technicalFeedback": 88
+      }
+    },
+    {
+      "id": "drv_oliver_hayes",
+      "firstName": "Oliver",
+      "lastName": "Hayes",
+      "countryId": "GBR",
+      "age": 28,
+      "licenseId": "FIA_SUPER_LICENSE",
+      "specialization": "formula",
+      "currentTeamId": "atlas_gp",
+      "potential": 97,
+      "reputation": 96,
+      "attributes": {
+        "talent": 95,
+        "racecraft": 94,
+        "consistency": 92,
+        "qualifying": 97,
+        "starts": 91,
+        "wetWeather": 94,
+        "tyreManagement": 90,
+        "fuelSaving": 84,
+        "technicalFeedback": 88
+      }
+    },
+    {
+      "id": "drv_marco_bianchi",
+      "firstName": "Marco",
+      "lastName": "Bianchi",
+      "countryId": "ITA",
+      "age": 25,
+      "licenseId": "FIA_SUPER_LICENSE",
+      "specialization": "formula",
+      "currentTeamId": "nova_f1",
+      "potential": 94,
+      "reputation": 88,
+      "attributes": {
+        "talent": 91,
+        "racecraft": 89,
+        "consistency": 87,
+        "qualifying": 90,
+        "starts": 88,
+        "wetWeather": 85,
+        "tyreManagement": 84,
+        "fuelSaving": 82,
+        "technicalFeedback": 79
+      }
+    },
+    {
+      "id": "drv_jake_mitchell",
+      "firstName": "Jake",
+      "lastName": "Mitchell",
+      "countryId": "USA",
+      "age": 30,
+      "licenseId": "FIA_A",
+      "specialization": "oval",
+      "currentTeamId": "liberty_indy",
+      "potential": 92,
+      "reputation": 81,
+      "attributes": {
+        "talent": 88,
+        "racecraft": 90,
+        "consistency": 84,
+        "qualifying": 80,
+        "starts": 93,
+        "wetWeather": 67,
+        "tyreManagement": 82,
+        "fuelSaving": 78,
+        "technicalFeedback": 75
+      }
+    },
+    {
+      "id": "drv_aiden_cooper",
+      "firstName": "Aiden",
+      "lastName": "Cooper",
+      "countryId": "USA",
+      "age": 23,
+      "licenseId": "FIA_A",
+      "specialization": "oval",
+      "currentTeamId": "eagle_oval",
+      "potential": 90,
+      "reputation": 58,
+      "attributes": {
+        "talent": 82,
+        "racecraft": 84,
+        "consistency": 79,
+        "qualifying": 77,
+        "starts": 87,
+        "wetWeather": 61,
+        "tyreManagement": 76,
+        "fuelSaving": 72,
+        "technicalFeedback": 70
+      }
+    }
+  ],
+  "exampleUsage": {
+    "currentTeamId": "referencia teams.json",
+    "countryId": "referencia countries.json",
+    "licenseId": "referencia licenses.json",
+    "specialization": "afeta potencial efetivo por categoria",
+    "potential": "limite máximo teórico de evolução do piloto"
+  }
+}
