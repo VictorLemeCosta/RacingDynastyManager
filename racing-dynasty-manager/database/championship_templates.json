@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "0.1.0",
+  "game": "Racing Dynasty Manager",
+  "file": "championship_templates.json",
+  "templates": [
+	{
+	  "id": "template_regional_kart_indoor",
+	  "namePattern": "Regional Kart Indoor {city}",
+	  "categoryId": "kart_indoor_regional",
+	  "type": "regional",
+	  "regionScope": "city",
+	  "tier": 1,
+	  "requiredReputation": 0,
+	  "minimumLicenseId": "KART_REGIONAL",
+	  "minimumAge": 13,
+	  "prestige": 8,
+	  "teamCount": 10,
+	  "driversPerTeam": 1,
+	  "calendarStyle": "short_local",
+	  "pointSystemId": "junior_top10_no_fastest_lap",
+	  "seasonRules": {
+		"practiceSessions": 1,
+		"qualifyingFormat": "single_session",
+		"raceFormat": "single_race",
+		"raceDistanceLaps": 20,
+		"mandatoryPitStop": false,
+		"refuelingAllowed": false,
+		"setupChangesDuringRace": false,
+		"damageEnabled": true,
+		"safetyCarEnabled": false
+	  },
+	  "financials": {
+		"entryFee": 2500,
+		"basePrizePool": 30000,
+		"championPrize": 8000,
+		"averageTravelCostPerRound": 800
+	  },
+	  "calendarTemplate": [
+		{
+		  "round": 1,
+		  "namePattern": "Etapa Indoor {city} 1",
+		  "month": 2
+		},
+		{
+		  "round": 2,
+		  "namePattern": "Etapa Indoor {city} 2",
+		  "month": 3
+		},
+		{
+		  "round": 3,
+		  "namePattern": "Etapa Indoor {city} 3",
+		  "month": 5
+		},
+		{
+		  "round": 4,
+		  "namePattern": "Etapa Indoor {city} 4",
+		  "month": 7
+		},
+		{
+		  "round": 5,
+		  "namePattern": "Etapa Indoor {city} 5",
+		  "month": 9
+		},
+		{
+		  "round": 6,
+		  "namePattern": "Final Indoor {city}",
+		  "month": 11
+		}
+	  ],
+	  "progressionImpact": {
+		"licenseExperienceGain": 1.0,
+		"reputationGainMultiplier": 0.6,
+		"scoutingVisibility": "local"
+	  }
+	},
+	{
+	  "id": "template_national_kart",
+	  "namePattern": "{countryAdjective} Kart Championship",
+	  "categoryId": "kart_national",
+	  "type": "national",
+	  "regionScope": "country",
+	  "tier": 2,
+	  "requiredReputation": 12,
+	  "minimumLicenseId": "KART_NATIONAL",
+	  "minimumAge": 14,
+	  "prestige": 22,
+	  "teamCount": 14,
+	  "driversPerTeam": 1,
+	  "calendarStyle": "national_kart",
+	  "pointSystemId": "junior_top10_no_fastest_lap",
+	  "seasonRules": {
+		"practiceSessions": 2,
+		"qualifyingFormat": "single_session",
+		"raceFormat": "heat_plus_final",
+		"raceDistanceLaps": 28,
+		"mandatoryPitStop": false,
+		"refuelingAllowed": false,
+		"setupChangesDuringRace": false,
+		"damageEnabled": true,
+		"safetyCarEnabled": false
+	  },
+	  "financials": {
+		"entryFee": 12000,
+		"basePrizePool": 120000,
+		"championPrize": 35000,
+		"averageTravelCostPerRound": 5000
+	  },
+	  "calendarTemplate": [
+		{
+		  "round": 1,
+		  "namePattern": "National Kart Round 1",
+		  "month": 3
+		},
+		{
+		  "round": 2,
+		  "namePattern": "National Kart Round 2",
+		  "month": 4
+		},
+		{
+		  "round": 3,
+		  "namePattern": "National Kart Round 3",
+		  "month": 6
+		},
+		{
+		  "round": 4,
+		  "namePattern": "National Kart Round 4",
+		  "month": 8
+		},
+		{
+		  "round": 5,
+		  "namePattern": "National Kart Final",
+		  "month": 10
+		}
+	  ],
+	  "progressionImpact": {
+		"licenseExperienceGain": 1.4,
+		"reputationGainMultiplier": 1.0,
+		"scoutingVisibility": "national"
+	  }
+	}
+  ]
+}

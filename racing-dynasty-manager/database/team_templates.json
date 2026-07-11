@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "0.1.0",
+  "game": "Racing Dynasty Manager",
+  "file": "team_templates.json",
+
+  "templates": [
+
+	{
+	  "id": "regional_privateer",
+
+	  "tier": 1,
+
+	  "namePattern": "{city} Racing Team",
+
+	  "prestige": 5,
+
+	  "targetPosition": 18,
+
+	  "minimumManagerReputation": 0,
+
+	  "budget": 25000,
+
+	  "color": "#D32F2F"
+	},
+
+	{
+	  "id": "regional_competitive",
+
+	  "tier": 1,
+
+	  "namePattern": "{countryAdjective} Speed Motorsport",
+
+	  "prestige": 10,
+
+	  "targetPosition": 12,
+
+	  "minimumManagerReputation": 0,
+
+	  "budget": 50000,
+
+	  "color": "#1976D2"
+	},
+
+	{
+	  "id": "regional_favorite",
+
+	  "tier": 1,
+
+	  "namePattern": "{city} Performance Racing",
+
+	  "prestige": 20,
+
+	  "targetPosition": 5,
+
+	  "minimumManagerReputation": 25,
+
+	  "budget": 90000,
+
+	  "color": "#F57C00"
+	},
+
+	{
+	  "id": "national_privateer",
+
+	  "tier": 2,
+
+	  "namePattern": "{countryAdjective} Kart Team",
+
+	  "prestige": 25,
+
+	  "targetPosition": 12,
+
+	  "minimumManagerReputation": 25,
+
+	  "budget": 180000,
+
+	  "color": "#00897B"
+	},
+
+	{
+	  "id": "national_competition",
+
+	  "tier": 2,
+
+	  "namePattern": "{countryAdjective} Competition",
+
+	  "prestige": 40,
+
+	  "targetPosition": 5,
+
+	  "minimumManagerReputation": 50,
+
+	  "budget": 350000,
+
+	  "color": "#5E35B1"
+	}
+  ]
+}

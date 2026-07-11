@@ -10,7 +10,9 @@ const DATABASE_FILES := {
 	"teams": "res://database/teams.json",
 	"drivers": "res://database/drivers.json",
 	"staff": "res://database/staff.json",
-	"sponsors": "res://database/sponsors.json"
+	"sponsors": "res://database/sponsors.json",
+	"championshipTemplates": "res://database/championship_templates.json",
+	"teamTemplates":"res://database/team_templates.json",
 }
 
 static func load_json_file(path: String) -> Dictionary:

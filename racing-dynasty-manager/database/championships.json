@@ -98,6 +98,8 @@
 	  "categoryId": "kart_indoor_regional",
 	  "type": "regional",
 	  "regionScope": "state",
+	  "tier": 1,
+	  "requiredReputation": 0,
 	  "countryScope": [
         "BRA"
 	  ],
@@ -175,6 +177,8 @@
 	  "categoryId": "kart_national",
 	  "type": "national",
 	  "regionScope": "country",
+	  "tier": 2,
+	  "requiredReputation": 12,
 	  "countryScope": [
         "BRA"
 	  ],
@@ -240,12 +244,102 @@
 		"scoutingVisibility": "national"
 	  }
 	},
+		{
+	  "id": "champ_formula_delta",
+	  "name": "Formula Delta",
+	  "categoryId": "formula_delta",
+	  "type": "junior_formula",
+	  "regionScope": "country",
+	  "tier": 3,
+	  "requiredReputation": 20,
+	  "countryScope": ["BRA"],
+	  "minimumLicenseId": "FIA_D",
+	  "minimumAge": 15,
+	  "prestige": 30,
+	  "teamCount": 12,
+	  "driversPerTeam": 2,
+	  "calendarStyle": "junior_formula",
+	  "pointSystemId": "junior_top10_no_fastest_lap",
+	  "progressionImpact": {
+		"licenseExperienceGain": 1.6,
+		"reputationGainMultiplier": 1.2,
+		"scoutingVisibility": "national"
+	  }
+	},
+	{
+  "id": "champ_gt4_series",
+  "name": "GT4 Series",
+  "categoryId": "gt4",
+  "type": "entry_gt",
+  "regionScope": "international",
+  "tier": 3,
+  "requiredReputation": 18,
+  "countryScope": ["GBR", "FRA", "ITA", "DEU", "ESP"],
+  "minimumLicenseId": "FIA_D",
+  "minimumAge": 16,
+  "prestige": 32,
+  "teamCount": 16,
+  "driversPerTeam": 2,
+  "calendarStyle": "gt_regional",
+  "pointSystemId": "standard_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 1.5,
+	"reputationGainMultiplier": 1.2,
+	"scoutingVisibility": "regional"
+  }
+},
+{
+  "id": "champ_stock_light",
+  "name": "Stock Light",
+  "categoryId": "stock_light",
+  "type": "junior_touring",
+  "regionScope": "country",
+  "tier": 3,
+  "requiredReputation": 22,
+  "countryScope": ["BRA"],
+  "minimumLicenseId": "FIA_D",
+  "minimumAge": 16,
+  "prestige": 35,
+  "teamCount": 14,
+  "driversPerTeam": 2,
+  "calendarStyle": "touring_national",
+  "pointSystemId": "standard_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 1.7,
+	"reputationGainMultiplier": 1.3,
+	"scoutingVisibility": "national"
+  }
+},
+{
+  "id": "champ_formula_regional",
+  "name": "Formula Regional Championship",
+  "categoryId": "formula_regional",
+  "type": "junior_formula",
+  "regionScope": "international",
+  "tier": 4,
+  "requiredReputation": 35,
+  "countryScope": ["ITA", "GBR", "FRA", "ESP", "DEU"],
+  "minimumLicenseId": "FIA_C",
+  "minimumAge": 16,
+  "prestige": 42,
+  "teamCount": 12,
+  "driversPerTeam": 2,
+  "calendarStyle": "formula_regional",
+  "pointSystemId": "standard_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 2.0,
+	"reputationGainMultiplier": 1.5,
+	"scoutingVisibility": "international"
+  }
+},
 	{
 	  "id": "champ_formula_4_international",
 	  "name": "Formula 4 International Trophy",
 	  "categoryId": "formula_4",
 	  "type": "international",
 	  "regionScope": "multi_country",
+	  "tier": 4,
+	  "requiredReputation": 25,
 	  "countryScope": [
 		"GBR",
 		"ITA",
@@ -322,11 +416,79 @@
 	  }
 	},
 	{
+  "id": "champ_formula_3",
+  "name": "Formula 3 Championship",
+  "categoryId": "formula_3",
+  "type": "fia_junior",
+  "regionScope": "international",
+  "tier": 5,
+  "requiredReputation": 45,
+  "countryScope": ["GBR", "ITA", "FRA", "BEL", "AUT"],
+  "minimumLicenseId": "FIA_C",
+  "minimumAge": 17,
+  "prestige": 58,
+  "teamCount": 10,
+  "driversPerTeam": 3,
+  "calendarStyle": "fia_support",
+  "pointSystemId": "standard_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 2.3,
+	"reputationGainMultiplier": 1.8,
+	"scoutingVisibility": "global"
+  }
+},
+{
+  "id": "champ_gt_world",
+  "name": "GT World Challenge",
+  "categoryId": "gt3",
+  "type": "international_gt",
+  "regionScope": "international",
+  "tier": 5,
+  "requiredReputation": 48,
+  "countryScope": ["GBR", "FRA", "ITA", "USA", "JPN"],
+  "minimumLicenseId": "FIA_C",
+  "minimumAge": 17,
+  "prestige": 60,
+  "teamCount": 18,
+  "driversPerTeam": 2,
+  "calendarStyle": "gt_global",
+  "pointSystemId": "standard_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 2.2,
+	"reputationGainMultiplier": 1.8,
+	"scoutingVisibility": "global"
+  }
+},
+{
+  "id": "champ_super_formula_lights",
+  "name": "Super Formula Lights",
+  "categoryId": "super_formula_lights",
+  "type": "junior_openwheel",
+  "regionScope": "country",
+  "tier": 6,
+  "requiredReputation": 60,
+  "countryScope": ["JPN"],
+  "minimumLicenseId": "FIA_B",
+  "minimumAge": 18,
+  "prestige": 68,
+  "teamCount": 10,
+  "driversPerTeam": 2,
+  "calendarStyle": "japanese_formula",
+  "pointSystemId": "standard_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 2.4,
+	"reputationGainMultiplier": 2.0,
+	"scoutingVisibility": "global"
+  }
+},
+	{
 	  "id": "champ_stock_car_brazil",
 	  "name": "Stock Car Brasil Pro Series",
 	  "categoryId": "stock_car",
 	  "type": "national_top",
 	  "regionScope": "country",
+	  "tier": 6,
+	  "requiredReputation": 55,
 	  "countryScope": [
         "BRA"
 	  ],
@@ -398,6 +560,8 @@
 	  "categoryId": "formula_1",
 	  "type": "world_championship",
 	  "regionScope": "global",
+	  "tier": 10,
+	  "requiredReputation": 95,
 	  "countryScope": [
 		"AUS",
 		"JPN",
@@ -479,11 +643,123 @@
 	  }
 	},
 	{
+  "id": "champ_formula_2",
+  "name": "Formula 2 Championship",
+  "categoryId": "formula_2",
+  "type": "fia_feeder",
+  "regionScope": "international",
+  "tier": 7,
+  "requiredReputation": 72,
+  "countryScope": ["GBR", "ITA", "FRA", "BEL", "AUT"],
+  "minimumLicenseId": "FIA_B",
+  "minimumAge": 18,
+  "prestige": 78,
+  "teamCount": 11,
+  "driversPerTeam": 2,
+  "calendarStyle": "fia_support",
+  "pointSystemId": "standard_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 2.8,
+	"reputationGainMultiplier": 2.2,
+	"scoutingVisibility": "global_elite"
+  }
+},
+{
+  "id": "champ_indy_nxt",
+  "name": "Indy NXT",
+  "categoryId": "indy_nxt",
+  "type": "junior_oval",
+  "regionScope": "north_america",
+  "tier": 7,
+  "requiredReputation": 70,
+  "countryScope": ["USA", "CAN"],
+  "minimumLicenseId": "FIA_B",
+  "minimumAge": 18,
+  "prestige": 76,
+  "teamCount": 12,
+  "driversPerTeam": 2,
+  "calendarStyle": "road_oval_mix",
+  "pointSystemId": "oval_top12",
+  "progressionImpact": {
+	"licenseExperienceGain": 2.7,
+	"reputationGainMultiplier": 2.1,
+	"scoutingVisibility": "global_elite"
+  }
+},
+{
+  "id": "champ_wec_lmp2",
+  "name": "WEC LMP2 Championship",
+  "categoryId": "wec_lmp2",
+  "type": "world_endurance",
+  "regionScope": "global",
+  "tier": 7,
+  "requiredReputation": 75,
+  "countryScope": ["FRA", "ITA", "BEL", "USA", "JPN"],
+  "minimumLicenseId": "FIA_B",
+  "minimumAge": 18,
+  "prestige": 80,
+  "teamCount": 12,
+  "driversPerTeam": 3,
+  "calendarStyle": "endurance_global",
+  "pointSystemId": "endurance_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 2.8,
+	"reputationGainMultiplier": 2.3,
+	"scoutingVisibility": "global_elite"
+  }
+},
+{
+  "id": "champ_super_formula",
+  "name": "Super Formula Championship",
+  "categoryId": "super_formula",
+  "type": "elite_formula",
+  "regionScope": "country",
+  "tier": 8,
+  "requiredReputation": 82,
+  "countryScope": ["JPN"],
+  "minimumLicenseId": "FIA_A",
+  "minimumAge": 18,
+  "prestige": 90,
+  "teamCount": 11,
+  "driversPerTeam": 2,
+  "calendarStyle": "japanese_formula",
+  "pointSystemId": "standard_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 3.0,
+	"reputationGainMultiplier": 2.5,
+	"scoutingVisibility": "global_elite"
+  }
+},
+{
+  "id": "champ_formula_e",
+  "name": "Formula E World Championship",
+  "categoryId": "formula_e",
+  "type": "world_championship",
+  "regionScope": "global",
+  "tier": 9,
+  "requiredReputation": 90,
+  "countryScope": ["GBR", "ITA", "USA", "DEU", "BRA", "JPN"],
+  "minimumLicenseId": "FIA_SUPER_LICENSE",
+  "minimumAge": 18,
+  "prestige": 95,
+  "teamCount": 11,
+  "driversPerTeam": 2,
+  "calendarStyle": "electric_global",
+  "pointSystemId": "standard_top10",
+  "progressionImpact": {
+	"licenseExperienceGain": 3.0,
+	"reputationGainMultiplier": 2.8,
+	"scoutingVisibility": "global_elite"
+  }
+},
+	{
 	  "id": "champ_wec_hypercar_world",
 	  "name": "World Endurance Hypercar Championship",
 	  "categoryId": "wec_hypercar",
 	  "type": "world_endurance",
 	  "regionScope": "global",
+	  "tier": 8,
+	  "requiredReputation": 82,
 	  "countryScope": [
 		"FRA",
 		"BEL",
@@ -570,6 +846,8 @@
 	  "categoryId": "indycar",
 	  "type": "top_oval_formula",
 	  "regionScope": "north_america",
+	  "tier": 8,
+	  "requiredReputation": 80,
 	  "countryScope": [
 		"USA",
         "CAN"
